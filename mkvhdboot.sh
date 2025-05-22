@@ -20,7 +20,8 @@ cd ./boot
 ln ../efi/microsoft/boot/bcd bcd
 
 cd ..
-mkisofs $option -no-emul-boot -boot-load-size $loadsize -b boot/etfsboot.com  -eltorito-alt-boot -no-emul-boot -e  efi.img  -o ../ventoy_vhdboot.img ./ 
+## mkisofs $option -no-emul-boot -boot-load-size $loadsize -b boot/etfsboot.com  -eltorito-alt-boot -no-emul-boot -e  efi.img  -o ../ventoy_vhdboot.img ./ 
+mkisofs $option -no-emul-boot -boot-load-size $loadsize -b   efi/boot/bootx64.efi  -o ../ventoy_vhdboot.img ./ 
 
 cd ..
 
