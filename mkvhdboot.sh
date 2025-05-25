@@ -18,6 +18,11 @@ fi
 
 cd ./boot
 ln ../efi/microsoft/boot/bcd bcd
+cp ../efi/microsoft/boot/bcd ../efi/microsoft/boot/BCD
+cp bcd BCD
+cd ..
+cp bootmgr BOOTMGR
+cd ./boot
 
 cd ..
 ## mkisofs $option -no-emul-boot -boot-load-size $loadsize -b boot/etfsboot.com  -eltorito-alt-boot -no-emul-boot -e  efi.img  -o ../ventoy_vhdboot.img ./ 
